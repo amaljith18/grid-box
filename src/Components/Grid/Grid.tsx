@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useState, useCallback } from 'react';
 import Box from '../Box/Box';
 import { BoxState } from '../types/types';
 
@@ -19,11 +19,8 @@ const Grid = () => {
         setClickOrder((prevOrder) => [...prevOrder, id]);
     };
 
-    const resetBoxes = () => {
-
+    const resetBoxes = useCallback(() => {
         const orderToReset = [...clickOrder];
-
-
         orderToReset.forEach((id, index) => {
             setTimeout(() => {
                 setBoxes((prevBoxes) =>
@@ -35,7 +32,7 @@ const Grid = () => {
         });
 
         setClickOrder([]);
-    };
+    }, [clickOrder]);
 
     return (
         <div className="flex flex-col items-center gap-5">
