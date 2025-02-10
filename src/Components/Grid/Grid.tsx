@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Box from '../Box/Box';
 import { BoxState } from '../types/types';
 
@@ -7,7 +7,7 @@ const Grid = () => {
         Array.from({ length: count }, (_, id) => ({ id, color: "white" }));
 
     const [boxes, setBoxes] = useState<BoxState[]>(createBoxes(9));
-    
+
     const [clickOrder, setClickOrder] = useState<number[]>([]);
 
     const handleBoxClick = (id: number) => {
