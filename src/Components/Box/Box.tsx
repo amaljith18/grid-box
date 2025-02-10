@@ -1,4 +1,5 @@
 import {} from 'react'
+import { BoxProps } from '../types/types'
 
 const Box = ({ id, color, onClick }: BoxProps) => {
     return (
@@ -13,10 +14,3 @@ const Box = ({ id, color, onClick }: BoxProps) => {
 }
 
 export default Box
-
-
-interface BoxProps {
-    id: number;
-    color: string;
-    onClick: (id: number) => void;
-}
