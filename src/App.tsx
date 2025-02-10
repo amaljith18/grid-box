@@ -1,4 +1,3 @@
-import { } from 'react'
 import Grid from './Components/Grid/Grid'
 
 
